@@ -1,0 +1,13 @@
+<h1> Item </h1>
+
+<p>
+	<%= @item.name %>
+</p>
+
+<p>
+	<%= @item.description %>
+</p>
+
+<p>
+	<%= image_tag @item.itempic_url() if @item.itempic? %>
+</p>
