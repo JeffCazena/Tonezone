@@ -4,10 +4,10 @@ Tonezone::Application.routes.draw do
  
   root :to => 'splash#index'
 
-  resources :users, only: [:edit, :show, :update]
+  resources :users
   resources :items
 
-  #get "/items", to: "items#index", as: "user_root"
+  #get "/item", to: "items#show", as: "item_root"
   
 end
 

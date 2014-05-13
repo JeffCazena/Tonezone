@@ -9,6 +9,7 @@ before_action :authenticate_user!
 
   def show
     @item = Item.find params[:id]
+    @itempic = ItempicUploader.new
   end
 
   def new
@@ -17,7 +18,6 @@ before_action :authenticate_user!
 
   def create
     @item = Item.new(safe_params)
-
     if @item.save
       redirect_to @item
     else
@@ -42,7 +42,7 @@ before_action :authenticate_user!
   private
 
     def safe_params
-      params.require(:item).permit(:title, :description)
+      params.require(:item).permit(:name, :description, :itempic)
     end
 
 end

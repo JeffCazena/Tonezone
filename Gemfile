@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+#gem 'protected_attributes'
+
+gem 'carrierwave'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 

@@ -7,12 +7,12 @@ en:
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
     failure:
-      already_authenticated: "Yo, youre already logged in dude."
+      already_authenticated: "Already logged in"
       inactive: "Your account is not activated yet."
-      invalid: "INVALIDINVALIDINVALID."
+      invalid: "INVALID."
       locked: "YOU BEEN LOCKED OUT."
       last_attempt: "You have one more attempt before your account will be locked."
-      not_found_in_database: "INVALIDINVALIDINVALID."
+      not_found_in_database: "Not found in database."
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You shall not pass. Unless of course you decided to sign in"
       unconfirmed: "You have to confirm your account before continuing."
@@ -41,8 +41,8 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
       updated: "You updated your account successfully."
     sessions:
-      signed_in: "Ooooh. You've been signed in."
-      signed_out: "Peace, dude."
+      signed_in: "You've been signed in."
+      signed_out: "Youve been signed out"
     unlocks:
       send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
@@ -52,8 +52,8 @@ en:
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
       expired: "has expired, please request a new one"
-      not_found: "this shit aint here"
+      not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "1 thing prevented %{resource} from being saved. Fix that shit.:"
-        other: "You fucked up. %{count} errors prohibited this %{resource} from being saved:"
+        one: "1 error prevented %{resource} account from being created.:"
+        other: "%{count} errors prohibited this %{resource} account from being created:"
