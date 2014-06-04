@@ -19,7 +19,7 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
+  adapter: postgresql
   database: tone_zone_production
   pool: 5
   timeout: 5000
