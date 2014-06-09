@@ -39,6 +39,13 @@ before_action :authenticate_user!
     end
   end
 
+  def destroy
+    @item = Item.find params[:id]
+    @item.destroy
+
+    redirect_to items_url(@items)
+  end
+
   private
 
     def safe_params

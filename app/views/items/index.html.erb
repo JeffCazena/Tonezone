@@ -3,3 +3,20 @@
 <%= link_to 'Edit Profile', edit_user_registration_path %>
 <%= link_to 'Create Item', new_item_path %>
 
+<table>
+	<th>
+		<tr>
+			<td>Name</td>
+			<td>User</td>
+		</tr>
+	</th>
+		<% @items.each do |item| %>
+			<tr>
+				<td><%= item.name %></td>
+				<td><%= link_to "View", item %></td>
+				<td><%= link_to "Edit", edit_item_path(item) %></td>
+			</tr>
+		<% end %>
+	<% end %>
+</table>
+
