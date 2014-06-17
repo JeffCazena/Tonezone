@@ -1,22 +1,30 @@
+<head class="top">
 <h1><%= "Hello #{current_user.email}" %></h1>
-<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<%= link_to 'Edit Profile', edit_user_registration_path %>
-<%= link_to 'Create Item', new_item_path %>
+<h2><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></h2>
+<h2><%= link_to 'Edit Profile', edit_user_registration_path %></h2>
+<h2><%= link_to 'Create Item', new_item_path %></h2>
+</head>
+
 
 <table>
 	<th>
 		<tr>
-			<td>Name</td>
+			<td>Item</td>
 			<td>User</td>
 		</tr>
-	</th>
+	</th>	
 		<% @items.each do |item| %>
 			<tr>
 				<td><%= item.name %></td>
+				<td><%= item.user.email %></td>
 				<td><%= link_to "View", item %></td>
-				<td><%= link_to "Edit", edit_item_path(item) %></td>
+				<% if current_user == item.user %>
+					<td>
+						<%= link_to "Edit", edit_item_path(item) %>
+					</td>
+				<% end %>
 			</tr>
-		<% end %>
 	<% end %>
 </table>
+
 

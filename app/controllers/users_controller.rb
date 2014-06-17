@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
 before_action :authenticate_user!, :redirect_if_not_correct_user!, except: :update  
 
   def show

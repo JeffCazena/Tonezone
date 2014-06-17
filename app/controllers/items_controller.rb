@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
 
+
 before_action :authenticate_user!
 
 
@@ -17,7 +18,7 @@ before_action :authenticate_user!
   end
 
   def create
-    @item = Item.new(safe_params)
+    @item = current_user.items.create(safe_params)
     if @item.save
       redirect_to @item
     else
