@@ -16,7 +16,7 @@
 		<% @items.each do |item| %>
 			<tr>
 				<td><%= item.name %></td>
-				<td><%= item.user.email %></td>
+				<td><%= item.user.try(:email).blank? ? 'N/A' : item.user.email %></td>
 				<td><%= link_to "View", item %></td>
 				<% if current_user == item.user %>
 					<td>
